@@ -1,52 +1,51 @@
 <!doctype html>
 <html lang='en'>
+
 <head>
     <meta charset="utf-8">
     <title>Rool the dice</title>
     <link href="rolldices.css" rel="stylesheet">
     <script src="rolldices.js" type="text/javascript" charset="utf-8"></script>
 </head>
+
 <body onload="randomColor(),getNames()">
-
-<header>
-Wellcome to the "Roll the dice" game!
-<p id="names"></p>
-</header>
-<!--multiplayer layout using flex-box-->
-<div class="flex-container">
-	
-<div class="player1">
-   <button onclick="rolldice()">Click to see you're dices</button><br>
-   <p>You're dices are:</p><br>
-   <p id="randomDice"></p><br><br>
-   <p>  The sum is:</p><br>
-   <p id="sum1"></p><br>
- 
-
-
- </div>
-<div class="player2">
- <button onclick="rolldice2(),winner()">Click to see you're dices</button><br>
-   <p>You're dices are:</p><br>
-   <p id="randomDice2"></p><br><br>
-   <p>  The sum is:</p><br>
-   <p id="sum2"></p><br>
-
-   <h3 id="winner"></h3>
-  
-
-</div>
-
-
-
-
-
-</div>
-
-<footer>
-	Copyright &copy; Cecilia Tanzer
-	2017
-</footer>
-
+    <header>
+        <h1>Wellcome to the "Roll the dice" game!</h1>
+        <p id="names"></p>
+    </header>
+    <!--multiplayer layout using flex-box-->
+    <div class="winMessage">
+        <h3 id="winner"></h3>
+    </div>
+    <div class="flex-container">
+        <div class="player1">
+            <button onclick="rolldice()">Click to roll 3 dices</button>
+            <br>
+            <!--<p>You're dices are:</p><br>-->
+            <p id="randomDice"></p>
+            <br>
+            <br>
+            <p> Score:</p>
+            <br>
+            <p id="sum1"></p>
+            <br>
+        </div>
+        <div class="player2">
+            <button onclick="rolldice2(),winner()">Click to roll 3 dices</button>
+            <br>
+            <!-- <p>You're dices are:</p><br>-->
+            <p id="randomDice2"></p>
+            <br>
+            <br>
+            <p> Score: </p>
+            <br>
+            <p id="sum2"></p>
+            <br>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; Cecilia Tanzer 2017
+    </footer>
 </body>
+
 </html>
